@@ -1,0 +1,14 @@
+<h3>NEWS</h3>
+<div *ngFor="let article of news?.articles" class="main-conteiner">
+  <p>
+    Title: {{article.title}}
+  </p>
+  <a [href]="article.url" target="_blank">
+    <p class="information">more information...</p>
+  </a>
+  <div class="author" *ngIf="article.author">
+    <p>
+      Author: {{article.author}}
+    </p>
+  </div>
+</div>
